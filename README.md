@@ -1,4 +1,2 @@
 # Frontend_develpment
-name: Aaryan dahal
-clas 10
-location ktm
+my name is aryan dahal and i am a 17 years old young and fress coder and develper who have just begain the journey of deep knowledge in computer engerning 
