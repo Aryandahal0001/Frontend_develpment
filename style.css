@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(38, 35, 35);
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.navbar{
+    padding: auto;
+    padding-left: 5%;
+    margin: auto;
+    background-color: rgb(223, 171, 171);
+    font-size: 150%;
+    color: red;
+}
+a{
+    padding-right:2%;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color: white;
+    font-size: 152%;
+    text-shadow: 10px 10px 10px red;
+}
+.gaming_photo{
+    height: 50%;
+    width: 50%;
+    display: inline;
+}
+.home_title{
+    color: white;
+    text-align: center;
+    font-size: 250%;
+    text-shadow: 10px 10px 20px white;
+}
+.home_discription{
+    max-width: 50%;
+    color: white;
+    float: left;
+}
