@@ -3,46 +3,57 @@ body {
     color: white;
     margin:0px;
     padding:0px;
-    background-color: rgb(111, 101, 101);
+    background-color: rgb(46, 43, 43);
 }
-
-.navbar {
+html {
+    scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+#navbar {
     background-color: rgb(38, 35, 35);
-    font-size: 1.5rem;
-    color: red;
-    float: left;
+    font-size: 1.3rem;
     width: 100%;
-    padding: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
     position: fixed;
-    bottom: 95vh;
-}
-.navbar_nightmode {
-    background-color: rgb(77, 80, 80);
-    color: white;
-    height: 5vh;
-    float: right;
 }
 
- .navbar a {
+#navbar a {
     color: whitesmoke;
     padding-right: 2%;
     text-decoration: none;
+    transition: all 0.5s ease-in-out;
 }
 
-.navbar a:hover {
-    color: white;
+#navbar a:hover {
+    font-size: 1.5rem;
+    text-decoration: underline solid blue 4px;
+    text-decoration-thickness: 2px;
     background-color: rgb(58, 58, 58);
-    font-size: 1.52rem;
 }
-.navbar_nightmode_button :hover {
+
+#navbar_nightmode {
+    background-color: whitesmoke;
+    height: 5vh;
+    display: flex;
+    border-image-outset: 10px;
+    justify-content:flex-start;
+    border-radius: 50%;
+}
+
+#navbar_nightmode_button:hover #navbar_nightmode {
     background-color: white;
-    font-size: 1.52rem;
 }
-.about_me_section{
+
+  
+#about_me_section{
     height: 100vh;
     width: 95vw;
 }
-.about_me_title ,.gaming_title{
+ #gaming_title{
     text-align: center;
     font-size: 5rem;
     text-shadow:0px 0px 100px #0ff,
@@ -50,8 +61,23 @@ body {
     0px 0px 10px #0ff,
     0px 0px 10px #0ff;
 }
-
-.about_me_pic{
+#project_title{ 
+    text-align: center;
+    font-size: 3rem;
+    text-shadow:0px 0px 100px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff;
+}
+#about_me_title_given{
+    text-align: center;
+    font-size: 5rem;
+    text-shadow:0px 0px 100px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff;
+}
+#about_me_pic{
     height: 60vh;
     width: 38vw;
     border-radius: 50%;
@@ -64,27 +90,15 @@ body {
     padding: 1%;
 }
 
-.about_me_discription {
+#about_me_discription {
     max-width: 50vw;
     min-width:min-content;
     font-size: 120%;
     float: left;
     padding: 2%;
 }
-.gaming_section{
-    background:url(./images/online_gaming_photo.png) no-repeat center center/cover;
-    min-height: 100vh;
-    object-fit:fill;
-    -o-object-fit: contain;
-}
-.gaming_photo {
-    height: 100%;
-    width: 100%;
-    display: inline-block; 
-    border-radius: 10px;
-}
 
-.home_discription {
+#home_discription {
     max-width: 30%;
     font-size: 120%;
     text-overflow: ellipsis;
@@ -97,19 +111,19 @@ body {
     position: relative;
     top:20vh;
 }
-.home_discription:hover{
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+#home_discription:hover{
+    transition-timing-function: cubic-bezier(0#075, 0.82, 0#165, 1);
     transition:all 0.9s ease;
     overflow:auto;
     height: 30vh;
 }
 
-.send_button:hover {
+#send_button:hover {
     background-color: rgb(133, 127, 127); 
 }
 
-.form  {
-    background-color: #f0f8ff; 
+#form  {
+    background-color: #414950; 
     text-align: center;
     margin: 5vh auto; 
     padding: 3vh 2vw; 
@@ -136,7 +150,7 @@ input:focus {
      border-color: rgba(0, 123, 255, 0.8); 
 }
 
-.send_button {
+#send_button {
     background-color: #000000; 
     color: white;
     border: none;
@@ -157,14 +171,14 @@ button:active {
     transform: scale(0.98);
 }
 
-.copyright {
+#copyright {
     text-align: center;
     color: white;
     font-size: 1rem;
     margin-top: 5vh;
     text-shadow: 10px 10px 20px white;
 }
-.copyright_contact_link{
+#copyright_contact_link{
     text-decoration: none;
     font-size: 1.1rem;
     color: yellow;
@@ -177,64 +191,60 @@ button:active {
     font-size: 1rem;
     box-shadow: 10px 10px 10px skyblue;
 }
-    .layout{
-        display: flex;
-        flex-wrap: wrap;
-     }
-     .project_photo{
-        height: 60%;
-        width: 90%;
-        border-radius:10px;
-        object-fit: cover;
-        justify-content: space-between;
-        display: flex;
-        margin: 15px;
-        flex-wrap: wrap;
-     }
-     .myprojects{
-        height: 60vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        border-radius: 10px;
-        justify-content: center;
-        margin: 10rem;
-        justify-content: space-between;
-     }
-     .myprojects p{
-        color: black;
-        text-align: center;
-     }
-     .myprojects h3{
-        text-align: center;
-        font-weight: bold;
-        color: white;
-     }
-     .myproject_1 {
-        display: flex;
-        flex-direction: column;
-        background-color: grey;
-        border-radius: 10px;
-     }
-     .myproject_2{
-        display: flex;
-        flex-direction: column;
-        background-color: blue;
-        border-radius: 10px;
-     }
-     .myproject_3{
-        display: flex;
-        flex-direction: column;
-        background-color: green;
-        border-radius: 10px;
-     }
-     .myproject_4{    
-        display: flex;
-        flex-direction: column;
-        background-color: red;
-        border-radius: 10px;
-     }
-     .myproject_5{
-        background-color: grey;
-        border-radius: 10px;
-     }
+ 
+#myprojects_layout{
+    display: flex;
+ }
+ #project_photo{
+    height: auto;
+    max-height: 35vh;
+    border-radius:10px;
+    justify-content: space-between;
+    display: flex;
+    min-width:10vw;
+    max-width: 50vw;
+ }
+ #myprojects {
+    height: auto; 
+    max-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center;
+    padding: 2%;
+}
+
+ #myprojects p{
+    color: black;
+    text-align: center;
+    font-size: 90%;
+ }
+ #myprojects h3{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+ }
+ #myproject{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    border-radius: 10px;
+ }
+#home{
+    height: 100vh;
+    width: 90vw;
+}
+#about_me_title{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20vh;
+    font-size: 5rem;
+    text-shadow:0px 0px 100px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff,
+    0px 0px 10px #0ff;
+}
