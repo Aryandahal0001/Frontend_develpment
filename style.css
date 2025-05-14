@@ -19,6 +19,7 @@ html {
     display: flex;
     align-items: center;
     position: fixed;
+    z-index: 100;
 }
 
 #navbar a {
@@ -192,45 +193,70 @@ button:active {
     box-shadow: 10px 10px 10px skyblue;
 }
  
-#myprojects_layout{
-    display: flex;
- }
- #project_photo{
-    height: auto;
-    max-height: 35vh;
-    border-radius:10px;
-    justify-content: space-between;
-    display: flex;
-    min-width:10vw;
-    max-width: 50vw;
- }
- #myprojects {
-    height: auto; 
-    max-height: fit-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px; 
-    justify-content: center;
-    padding: 2%;
+.projects {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
 }
 
- #myprojects p{
-    color: black;
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #02c7c4;
     text-align: center;
-    font-size: 90%;
- }
- #myprojects h3{
-    text-align: center;
-    font-weight: bold;
-    color: white;
- }
- #myproject{
+}
+
+.project-list {
     display: flex;
-    flex-direction: column;
-    background-color: grey;
-    border-radius: 10px;
- }
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    position: sticky;
+}
+
+.project-card {
+    background:rgb(56, 55, 55);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translatey(10px);
+    box-shadow: 0 12px 30px rgba(255, 254, 254, 0.4);
+    position: sticky;
+}
+.project-card:focus {
+    display: block;
+    position: sticky;
+    z-index: -100;
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.project-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #02c7c4;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #aabda4;
+}
 #home{
     height: 100vh;
     width: 90vw;

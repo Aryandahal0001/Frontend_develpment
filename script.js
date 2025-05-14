@@ -13,43 +13,49 @@ function typeText() {
             typedText.textContent = '';
             index = 0;
             typeText();
-        }, 1000); // Wait 1s before restarting
+        }, 10000); // Wait 1s before restarting
     }
 }
 
 typeText();
+
 const projects = [
     {
-        image :"./images/ludo_game_project_photo.jpg",
-        title :"Flappy Bird",
-        discription :"This is a flappy bird game made using HTML, CSS and JavaScript. The game is simple and easy to play. The objective of the game is to fly the bird through the pipes without hitting them.",
+        image: "./images/my_pic.jpg",
+        title: "Animated Navbar",
+        description: "A responsive navigation bar with smooth animations and toggle functionality.",
     },
     {
-        image :"./images/ludo_game_project_photo.jpg",
-        title :"Ludo Game",
-        discription :"This is a ludo game made using HTML, CSS and JavaScript. The game is simple and easy to play. The objective of the game is to get all your pieces to the finish line before your opponents.",
+        image: "./images/my_pic.jpg",
+        title: "Landing Page",
+        description: "A responsive website built with HTML, CSS, and JavaScript.",
     },
     {
-        image :"./images/ludo_game_project_photo.jpg",
-        title :"Snake Game",
-        discription :"This is a snake game made using HTML, CSS and JavaScript. The game is simple and easy to play. The objective of the game is to eat the food and grow the snake without hitting the walls or itself.",
-    },
-    {
-        image :"./images/ludo_game_project_photo.jpg",
-        title :"tic-tac-toe",
-        discription :"This is a tic-tac-toe game made using HTML, CSS and JavaScript. The game is simple and easy to play. The objective of the game is to get three in a row before your opponent."
+        image: "./images/my_pic.jpg",
+        title: "Portfolio Template",
+        description: "A portfolio website showcasing creative works and skills.",
     },
 ];
 
-const container = document.getElementById("myprojects");
+const container = document.getElementById("myproject");
+container.classList.add("project-grid")
+
 projects.forEach(project => {
     const card = document.createElement("div");
-    card.className = "card";
+    card.className = "card project-card";
     card.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
-        <h3>${project.title}</h3>
-        <p>${project.discription}</p>
+        <div class="card-image-wrapper">
+            <img src="${project.image}" alt="${project.title}" class="card-image" />
+        </div>
+        <h3 class="card-title">${project.title}</h3>
+        <p class="card-description">${project.description}</p>
     `;
-    card.style.width = "30vw";
     container.appendChild(card);
 });
+const reviews =[
+    {
+        image:
+        title:"Asar khadal";
+        discrption:""
+    }
+]
