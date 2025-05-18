@@ -13,7 +13,7 @@ function typeText() {
             typedText.textContent = '';
             index = 0;
             typeText();
-        }, 10000); // Wait 1s before restarting
+        }, 1000); // Wait 1s before restarting
     }
 }
 
@@ -52,10 +52,3 @@ projects.forEach(project => {
     `;
     container.appendChild(card);
 });
-const reviews =[
-    {
-        image:
-        title:"Asar khadal";
-        discrption:""
-    }
-]
